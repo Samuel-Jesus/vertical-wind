@@ -2,7 +2,7 @@
   "name": "vertical-wind",
   "displayName": "vertical wind",
   "description": "extension that reorganizes Tailwind CSS classes into vertical, category-based groups inside class and className attributes, improving code readability without changing the generated CSS.",
-  "version": "0.0.1",
+  "version": "0.1.2",
   "engines": {
     "vscode": "^1.108.1"
   },
@@ -33,6 +33,11 @@
           "type": "boolean",
           "default": true,
           "description": "Add blank line between class groups"
+        },
+        "verticalWind.indentSize": {
+          "type": "number",
+          "default": 0,
+          "description": "Override de indentação (0 usa config do editor)"
         }
       }
     },
