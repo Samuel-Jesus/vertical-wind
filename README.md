@@ -1,6 +1,6 @@
 # Vertical Wind
 
-**Version:** 0.0.1
+**Version:** 0.2.2
 
 Vertical Wind é uma extensão para Visual Studio Code que reorganiza atributos de classes do Tailwind CSS em uma estrutura vertical e agrupada por categorias, com o objetivo de melhorar a legibilidade e a manutenção do código sem alterar o CSS gerado.
 
@@ -11,7 +11,9 @@ A execução é manual, via comando ou atalho de teclado, oferecendo controle to
 
 ## Como funciona
 
-## Features
+![Vertical Wind Demo](assets/vertical-wind-gif.gif)
+
+## Funcionalidades
 
 - Reorganização vertical automática de classes Tailwind.
 - Agrupamento por categorias semânticas.
@@ -21,13 +23,13 @@ A execução é manual, via comando ou atalho de teclado, oferecendo controle to
 - Funciona em HTML, JSX, TSX e arquivos compatíveis.
 - Atalho de teclado configurável.
 
-## Requirements
+## Requisitos
 
 - Visual Studio Code 1.108 ou superior.
 - Projeto que utilize Tailwind CSS (não é obrigatório para funcionar, mas é o foco).
 - Node.js apenas para desenvolvimento da extensão (não necessário para uso).
 
-## Extension Settings
+## Configuração da Extenção
 
 Esta extensão pode expor configurações futuras.  
 Atualmente não há configurações obrigatórias.
