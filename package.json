@@ -9,19 +9,45 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "activationEvents": [
+    "onCommand:vertical-wind.verticalize"
+  ],
   "main": "./dist/extension.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Samuel-Jesus/vertical-wind.git"
+  },
   "contributes": {
     "commands": [
       {
         "command": "vertical-wind.verticalize",
         "title": "Tailwind: Verticalize Classes"
       }
+    ],
+    "configuration": {
+      "title": "Vertical Wind",
+      "properties": {
+        "verticalWind.groupSpacing": {
+          "type": "boolean",
+          "default": true,
+          "description": "Add blank line between class groups"
+        }
+      }
+    },
+    "keybindings": [
+      {
+        "command": "vertical-wind.verticalize",
+        "key": "ctrl+alt+v",
+        "mac": "cmd+alt+v",
+        "when": "editorTextFocus"
+      }
     ]
   },
+  "publisher": "SamJ",
   "scripts": {
     "vscode:prepublish": "pnpm run package",
     "compile": "pnpm run check-types && pnpm run lint && node esbuild.js",
+    "build": "node esbuild.js",
     "watch": "npm-run-all -p watch:*",
     "watch:esbuild": "node esbuild.js --watch",
     "watch:tsc": "tsc --noEmit --watch --project tsconfig.json",
