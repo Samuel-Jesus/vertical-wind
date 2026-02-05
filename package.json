@@ -12,6 +12,7 @@
   "activationEvents": [
     "onCommand:vertical-wind.verticalize"
   ],
+  "license": "MIT",
   "main": "./dist/extension.js",
   "repository": {
     "type": "git",
