@@ -1,13 +1,11 @@
 import * as vscode from "vscode";
 
 export function activate(context: vscode.ExtensionContext) {
-  console.log("VERTICAL WIND ATIVOU");
-  vscode.window.showInformationMessage("Vertical Wind ACTIVATED");
   const disposable = vscode.commands.registerCommand(
     "vertical-wind.verticalize",
     async () => {
       const editor = vscode.window.activeTextEditor;
-      if (!editor) {return;}
+      if (!editor) { return; }
 
       const doc = editor.document;
       const text = doc.getText();
@@ -57,13 +55,13 @@ function group(list: string[]) {
   };
 
   for (const c of list) {
-    if (/^(flex|grid|block)/.test(c)) {buckets.layout.push(c);}
-    else if (/^(w-|h-)/.test(c)) {buckets.size.push(c);}
-    else if (/^(p-|m-)/.test(c)) {buckets.spacing.push(c);}
-    else if (/^(bg-|text-)/.test(c)) {buckets.color.push(c);}
-    else if (/^(rounded|shadow|border)/.test(c)) {buckets.border.push(c);}
-    else if (/^(hover:|focus:|active:)/.test(c)) {buckets.state.push(c);}
-    else {buckets.misc.push(c);}
+    if (/^(flex|grid|block)/.test(c)) { buckets.layout.push(c); }
+    else if (/^(w-|h-)/.test(c)) { buckets.size.push(c); }
+    else if (/^(p-|m-)/.test(c)) { buckets.spacing.push(c); }
+    else if (/^(bg-|text-)/.test(c)) { buckets.color.push(c); }
+    else if (/^(rounded|shadow|border)/.test(c)) { buckets.border.push(c); }
+    else if (/^(hover:|focus:|active:)/.test(c)) { buckets.state.push(c); }
+    else { buckets.misc.push(c); }
   }
 
   return Object.values(buckets).filter((a) => a.length);
