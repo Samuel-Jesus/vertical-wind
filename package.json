@@ -4,7 +4,7 @@
   "description": "extension that reorganizes Tailwind CSS classes into vertical, category-based groups inside class and className attributes, improving code readability without changing the generated CSS.",
   "version": "0.2.2",
   "engines": {
-    "vscode": "^1.108.1"
+    "vscode": "^1.70.0"
   },
   "icon": "icon.png",
   "categories": [
